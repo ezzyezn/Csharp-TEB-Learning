@@ -1,0 +1,171 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Страница-1" id="ICkmL9p2ZD9X4tjOQxFF">
+    <mxGraphModel dx="1614" dy="936" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="1654" background="#ffffff" math="0" shadow="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="G0KKF_ftfbUAB-QhShUs-2" parent="1" style="ellipse;whiteSpace=wrap;html=1;rounded=1;sketch=1;curveFitting=1;jiggle=2;" value="&lt;span style=&quot;font-family: Verdana; font-size: 17px; font-weight: 700;&quot;&gt;Początek&lt;/span&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="525" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="G0KKF_ftfbUAB-QhShUs-4" parent="1" style="swimlane;whiteSpace=wrap;html=1;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontSize=15;" value="Człowiek zadaje pytanie NAO" vertex="1">
+          <mxGeometry height="110" width="680" x="40" y="160" as="geometry">
+            <mxRectangle height="30" width="200" x="74" y="150" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G0KKF_ftfbUAB-QhShUs-6" parent="G0KKF_ftfbUAB-QhShUs-4" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fontStyle=0;fontSize=13;" value="Używasz SDK NAOqi. W kodzie definiujesz nasłuchiwanie komendy (na przykład po słowie „NAO”). NAO rejestruje dźwięk" vertex="1">
+          <mxGeometry height="60" width="664" x="8" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="G0KKF_ftfbUAB-QhShUs-8" parent="1" style="swimlane;whiteSpace=wrap;html=1;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontSize=15;" value="NAO nagrywa audio" vertex="1">
+          <mxGeometry height="110" width="680" x="440" y="330" as="geometry">
+            <mxRectangle height="30" width="200" x="74" y="150" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G0KKF_ftfbUAB-QhShUs-9" parent="G0KKF_ftfbUAB-QhShUs-8" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fontStyle=0;fontSize=13;" value="W kodzie zapisujesz plik audio w formacie WAV w lokalnym folderze. Używasz API NAOqi do przesłania pliku na serwer przez HTTP" vertex="1">
+          <mxGeometry height="60" width="664" x="8" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="G0KKF_ftfbUAB-QhShUs-13" parent="1" style="swimlane;whiteSpace=wrap;html=1;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontSize=15;" value="Rozpoznawanie mowy" vertex="1">
+          <mxGeometry height="110" width="680" x="40" y="510" as="geometry">
+            <mxRectangle height="30" width="200" x="74" y="150" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G0KKF_ftfbUAB-QhShUs-14" parent="G0KKF_ftfbUAB-QhShUs-13" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fontStyle=0;fontSize=13;" value="Na lokalnym komputerze uruchamiasz Whisper (za pomocą biblioteki Python openai-whisper). Plik audio jest przekazywany do funkcji i Whisper zwraca tekst" vertex="1">
+          <mxGeometry height="60" width="664" x="8" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="G0KKF_ftfbUAB-QhShUs-19" parent="1" style="swimlane;whiteSpace=wrap;html=1;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontSize=15;" value="Przetwarzanie przez sieć neuronową" vertex="1">
+          <mxGeometry height="110" width="680" x="440" y="690" as="geometry">
+            <mxRectangle height="30" width="200" x="74" y="150" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G0KKF_ftfbUAB-QhShUs-20" parent="G0KKF_ftfbUAB-QhShUs-19" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fontStyle=0;fontSize=13;" value="Używasz LLaMA 3 (przez Ollama). Wysyłasz tekst zapytania do modelu, a on szuka odpowiedzi w wcześniej przygotowanej bazie danych (dokumenty technikum)" vertex="1">
+          <mxGeometry height="60" width="664" x="8" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="G0KKF_ftfbUAB-QhShUs-25" edge="1" parent="1" style="curved=1;endArrow=classic;html=1;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="310" />
+              <mxPoint x="360" y="400" />
+              <mxPoint x="310" y="400" />
+              <mxPoint x="270" y="350" />
+              <mxPoint x="310" y="320" />
+            </Array>
+            <mxPoint x="340" y="280" as="sourcePoint" />
+            <mxPoint x="430" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G0KKF_ftfbUAB-QhShUs-26" edge="1" parent="1" style="curved=1;endArrow=classic;html=1;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="830" y="560" />
+              <mxPoint x="890" y="560" />
+              <mxPoint x="920" y="570" />
+              <mxPoint x="960" y="530" />
+              <mxPoint x="960" y="480" />
+              <mxPoint x="890" y="510" />
+              <mxPoint x="800" y="590" />
+            </Array>
+            <mxPoint x="870" y="460" as="sourcePoint" />
+            <mxPoint x="740" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G0KKF_ftfbUAB-QhShUs-27" edge="1" parent="1" style="curved=1;endArrow=classic;html=1;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="720" />
+              <mxPoint x="300" y="730" />
+              <mxPoint x="290" y="770" />
+              <mxPoint x="240" y="770" />
+              <mxPoint x="220" y="690" />
+              <mxPoint x="280" y="690" />
+              <mxPoint x="350" y="740" />
+            </Array>
+            <mxPoint x="260" y="640" as="sourcePoint" />
+            <mxPoint x="420" y="717.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G0KKF_ftfbUAB-QhShUs-30" parent="1" style="swimlane;whiteSpace=wrap;html=1;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontSize=15;" value="Tworzenie odpowiedzi" vertex="1">
+          <mxGeometry height="110" width="680" x="40" y="870" as="geometry">
+            <mxRectangle height="30" width="200" x="74" y="150" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G0KKF_ftfbUAB-QhShUs-31" parent="G0KKF_ftfbUAB-QhShUs-30" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fontStyle=0;fontSize=13;" value="Python zwraca tekst-odpowiedź z modelu, który zapisujesz w zmiennej" vertex="1">
+          <mxGeometry height="60" width="664" x="8" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="G0KKF_ftfbUAB-QhShUs-32" parent="1" style="swimlane;whiteSpace=wrap;html=1;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontSize=15;" value="Wysyłanie odpowiedzi do NAO" vertex="1">
+          <mxGeometry height="110" width="680" x="430" y="1050" as="geometry">
+            <mxRectangle height="30" width="200" x="74" y="150" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G0KKF_ftfbUAB-QhShUs-33" parent="G0KKF_ftfbUAB-QhShUs-32" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fontStyle=0;fontSize=13;" value="Używasz żądania HTTP w Pythonie (Flask) i wysyłasz tekst z powrotem do NAO, który go odbiera" vertex="1">
+          <mxGeometry height="60" width="664" x="8" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="G0KKF_ftfbUAB-QhShUs-34" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" value="" vertex="1">
+          <mxGeometry height="60" width="30" x="170" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="G0KKF_ftfbUAB-QhShUs-35" parent="1" style="swimlane;whiteSpace=wrap;html=1;rounded=1;sketch=1;curveFitting=1;jiggle=2;fontSize=15;" value="Syntezowanie mowy" vertex="1">
+          <mxGeometry height="110" width="680" x="40" y="1220" as="geometry">
+            <mxRectangle height="30" width="200" x="74" y="150" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G0KKF_ftfbUAB-QhShUs-36" parent="G0KKF_ftfbUAB-QhShUs-35" style="rounded=1;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;fontStyle=0;fontSize=13;" value="NAO używa wbudowanego syntezatora mowy (Text-to-Speech z NAOqi), aby wypowiedzieć odpowiedź" vertex="1">
+          <mxGeometry height="60" width="664" x="8" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="G0KKF_ftfbUAB-QhShUs-37" edge="1" parent="1" style="curved=1;endArrow=classic;html=1;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="580" y="150" />
+              <mxPoint x="530" y="120" />
+            </Array>
+            <mxPoint x="590" y="120" as="sourcePoint" />
+            <mxPoint x="450" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G0KKF_ftfbUAB-QhShUs-38" edge="1" parent="1" style="curved=1;endArrow=classic;html=1;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="860" y="980" />
+              <mxPoint x="990" y="920" />
+              <mxPoint x="900" y="880" />
+              <mxPoint x="840" y="960" />
+            </Array>
+            <mxPoint x="850" y="820" as="sourcePoint" />
+            <mxPoint x="740" y="930" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G0KKF_ftfbUAB-QhShUs-39" edge="1" parent="1" style="curved=1;endArrow=classic;html=1;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="360" y="1070" />
+              <mxPoint x="240" y="1000" />
+              <mxPoint x="230" y="1120" />
+            </Array>
+            <mxPoint x="360" y="1000" as="sourcePoint" />
+            <mxPoint x="410" y="1110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G0KKF_ftfbUAB-QhShUs-40" edge="1" parent="1" style="curved=1;endArrow=classic;html=1;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <Array as="points">
+              <mxPoint x="920" y="1250" />
+              <mxPoint x="810" y="1180" />
+              <mxPoint x="780" y="1240" />
+              <mxPoint x="850" y="1260" />
+              <mxPoint x="860" y="1300" />
+              <mxPoint x="790" y="1320" />
+            </Array>
+            <mxPoint x="900" y="1170" as="sourcePoint" />
+            <mxPoint x="740" y="1280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="G0KKF_ftfbUAB-QhShUs-41" parent="1" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;font style=&quot;font-size: 23px;&quot; face=&quot;Verdana&quot;&gt;Glosariusz&lt;/font&gt;&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;div aria-hidden=&quot;true&quot; class=&quot;pointer-events-none -mt-px h-px translate-y-[calc(var(--scroll-root-safe-area-inset-bottom)-14*var(--spacing))]&quot;&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;div class=&quot;qMYqUG_convSearchResultHighlightRoot&quot;&gt;&lt;div class=&quot;&quot; data-turn-id-container=&quot;f4e68248-c7ad-4a34-88a9-280d8527caa5&quot; data-is-intersecting=&quot;true&quot;&gt;&lt;section class=&quot;text-token-text-primary w-full focus:outline-none has-data-writing-block:pointer-events-none [&amp;amp;:has([data-writing-block])&amp;gt;*]:pointer-events-auto R6Vx5W_threadScrollVars scroll-mb-[calc(var(--scroll-root-safe-area-inset-bottom,0px)+var(--thread-response-height))] scroll-mt-[calc(var(--header-height)+min(200px,max(70px,20svh)))]&quot; dir=&quot;auto&quot; data-turn-id=&quot;f4e68248-c7ad-4a34-88a9-280d8527caa5&quot; data-turn-id-container=&quot;f4e68248-c7ad-4a34-88a9-280d8527caa5&quot; data-testid=&quot;conversation-turn-96&quot; data-turn=&quot;assistant&quot;&gt;&lt;div class=&quot;text-base my-auto mx-auto pb-10 [--thread-content-margin:var(--thread-content-margin-xs,calc(var(--spacing)*4))] @w-sm/main:[--thread-content-margin:var(--thread-content-margin-sm,calc(var(--spacing)*6))] @w-lg/main:[--thread-content-margin:var(--thread-content-margin-lg,calc(var(--spacing)*16))] px-(--thread-content-margin)&quot;&gt;&lt;div data-conversation-screenshot-content=&quot;&quot; class=&quot;[--thread-content-max-width:40rem] @w-lg/main:[--thread-content-max-width:48rem] mx-auto max-w-(--thread-content-max-width) flex-1 group/turn-messages focus-visible:outline-hidden relative flex w-full min-w-0 flex-col agent-turn&quot;&gt;&lt;div class=&quot;flex max-w-full flex-col gap-4 grow&quot;&gt;&lt;div data-message-author-role=&quot;assistant&quot; data-message-id=&quot;f4e68248-c7ad-4a34-88a9-280d8527caa5&quot; dir=&quot;auto&quot; class=&quot;min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal outline-none keyboard-focused:focus-ring [.text-message+&amp;amp;]:mt-1&quot; data-turn-start-message=&quot;true&quot; tabindex=&quot;0&quot;&gt;&lt;div class=&quot;flex w-full flex-col gap-1 empty:hidden&quot;&gt;&lt;div class=&quot;markdown prose dark:prose-invert wrap-break-word w-full dark markdown-new-styling&quot;&gt;&lt;ol data-start=&quot;34&quot; data-end=&quot;394&quot; data-is-only-node=&quot;&quot; data-is-last-node=&quot;&quot;&gt;&lt;li data-section-id=&quot;kbttop&quot; data-start=&quot;34&quot; data-end=&quot;107&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot; face=&quot;Verdana&quot;&gt;SDK NAOqi — zestaw narzędzi do programowania i sterowania robotem NAO.&lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;font style=&quot;font-size: 14px;&quot; face=&quot;Verdana&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;li data-section-id=&quot;1f2dz48&quot; data-start=&quot;109&quot; data-end=&quot;179&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot; face=&quot;Verdana&quot;&gt;&lt;br&gt;Whisper — model rozpoznawania mowy, który zamienia dźwięk na tekst.&lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;font style=&quot;font-size: 14px;&quot; face=&quot;Verdana&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;li data-section-id=&quot;1waf8dd&quot; data-start=&quot;181&quot; data-end=&quot;295&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot; face=&quot;Verdana&quot;&gt;&lt;br&gt;Syntetyzator mowy (Text-to-Speech) wbudowany w NAO (NAOqi) — zamienia tekst na mowę, pozwalając robotowi mówić.&lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;font style=&quot;font-size: 14px;&quot; face=&quot;Verdana&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;li data-section-id=&quot;r37q30&quot; data-start=&quot;297&quot; data-end=&quot;394&quot; data-is-last-node=&quot;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot; face=&quot;Verdana&quot;&gt;&lt;br&gt;Ollama — narzędzie umożliwiające uruchamianie lokalnych modeli językowych, takich jak LLaMA 3.&lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;br&gt;&lt;/ol&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;z-0 flex min-h-[46px] justify-start&quot;&gt;&lt;/div&gt;&lt;div class=&quot;mt-3 w-full empty:hidden&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="270" width="690" x="50" y="1380" as="geometry" />
+        </mxCell>
+        <mxCell id="G0KKF_ftfbUAB-QhShUs-46" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="40" y="1360" as="sourcePoint" />
+            <mxPoint x="1120" y="1360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
